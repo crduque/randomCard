@@ -3,26 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random card</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gentium+Basic&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
-  <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+  <body class="bg-success">
+    <div class="card border w-25 container mt-2" id="card">
+      <div class="row" id="row1">
+        <div
+          class="col-4 left-suit d-flex justify-content-center"
+          id="left-suit"
+        ></div>
+      </div>
+      <div class="row" id="row2">
+        <div class="col-4"></div>
+        <div class="value col-4 d-flex justify-content-center" id="value"></div>
+      </div>
+      <div class="row" id="row3">
+        <div
+          class="col-4 offset-8 right-suit d-flex justify-content-center"
+          id="right-suit"
+        ></div>
       </div>
     </div>
   </body>
