@@ -6,7 +6,6 @@ import "../assets/img/4geeks.ico";
 import "../style/index.scss";
 
 const values = [
-  "1",
   "2",
   "3",
   "4",
@@ -20,7 +19,7 @@ const values = [
   "Q",
   "K",
   "A"
-]; //11J, 12Q, 13K, 14A
+];
 const suits = ["hearts", "spades", "clubs", "diamonds"];
 
 function randomIndex(array) {
@@ -32,17 +31,21 @@ function selectSuit() {
   let bot = document.querySelector("#right-suit");
   let result = randomIndex(suits);
   if (result == "hearts") {
-    top.classList.add("hearts");
-    bot.classList.add("hearts-rotate");
+    top.className = "hearts col-4 left-suit d-flex justify-content-center";
+    bot.className =
+      "hearts-rotate col-4 offset-8 right-suit d-flex justify-content-center";
   } else if (result == "spades") {
-    top.classList.add("spades");
-    bot.classList.add("spades-rotate");
+    top.className = "spades col-4 left-suit d-flex justify-content-center";
+    bot.className =
+      "spades-rotate col-4 offset-8 right-suit d-flex justify-content-center";
   } else if (result == "clubs") {
-    top.classList.add("clubs");
-    bot.classList.add("clubs-rotate");
+    top.className = "clubs col-4 left-suit d-flex justify-content-center";
+    bot.className =
+      "clubs-rotate col-4 offset-8 right-suit d-flex justify-content-center";
   } else {
-    top.classList.add("diamonds");
-    bot.classList.add("diamonds-rotate");
+    top.className = "diamonds col-4 left-suit d-flex justify-content-center";
+    bot.className =
+      "diamonds-rotate col-4 offset-8 right-suit d-flex justify-content-center";
   }
 }
 function selectValue() {
@@ -50,12 +53,12 @@ function selectValue() {
   let result = randomIndex(values);
   mid.innerHTML = result;
 }
-window.onload = function myCard() {
+
+function myCard() {
   selectSuit();
   selectValue();
-};
-// window.onload = function() {
-//   let a = randomIndex(values);
-//   let b = randomIndex(suits);
-//   console.log(a, b);
-// };
+}
+
+let myButton = document.querySelector("#button");
+
+myButton.addEventListener("click", myCard);
