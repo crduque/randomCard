@@ -31,21 +31,17 @@ function selectSuit() {
   let bot = document.querySelector("#right-suit");
   let result = randomIndex(suits);
   if (result == "hearts") {
-    top.className = "hearts col-4 left-suit d-flex justify-content-center";
-    bot.className =
-      "hearts-rotate col-4 offset-8 right-suit d-flex justify-content-center";
+    top.className = "hearts col-4 left-suit";
+    bot.className = "hearts-rotate col-4 offset-8 right-suit";
   } else if (result == "spades") {
-    top.className = "spades col-4 left-suit d-flex justify-content-center";
-    bot.className =
-      "spades-rotate col-4 offset-8 right-suit d-flex justify-content-center";
+    top.className = "spades col-4 left-suit";
+    bot.className = "spades-rotate col-4 offset-8 right-suit";
   } else if (result == "clubs") {
-    top.className = "clubs col-4 left-suit d-flex justify-content-center";
-    bot.className =
-      "clubs-rotate col-4 offset-8 right-suit d-flex justify-content-center";
+    top.className = "clubs col-4 left-suit";
+    bot.className = "clubs-rotate col-4 offset-8 right-suit";
   } else {
-    top.className = "diamonds col-4 left-suit d-flex justify-content-center";
-    bot.className =
-      "diamonds-rotate col-4 offset-8 right-suit d-flex justify-content-center";
+    top.className = "diamonds col-4 left-suit";
+    bot.className = "diamonds-rotate col-4 offset-8 right-suit";
   }
 }
 function selectValue() {
